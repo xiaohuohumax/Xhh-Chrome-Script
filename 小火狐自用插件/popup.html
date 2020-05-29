@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./less/popup.css">
+    <link rel="stylesheet" href="./less/bootstrap.css">
+    <link rel="stylesheet" href="./less/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./script/function.js"></script>
+    <script src="./setting.js"></script>
+    <script src="./script/xhhTools.js"></script>
+    <script src="./script/API.js"></script>
+</head>
+
+<body>
+    <div class="app scroll">
+        <div class="scrollBody">
+
+            <div id="appVipItem" class="appItem mb-2">
+                <input class="appItemRadio" type="checkbox" name="appItem" id="appRadioVip">
+                <label for="appRadioVip" class="d-block m-0">
+                    <div class="appItemHead border border-danger rounded d-flex align-items-center px-2 py-1">
+                        <i class="fa fa-film fa-fw" aria-hidden="true"></i>
+                        <span class="ml-2">VIP视频解析</span>
+                        <i class="fa fa-angle-double-down fa-fw "></i>
+                    </div>
+                </label>
+                <div class="appItemBody mt-1">
+                    <div class="appRight">
+                        <input type="text" class="appVipFindInput form-control form-control-sm" placeholder="筛选-支持正则">
+                        <span class="appVipFindSum appRightItem">123</span>
+                    </div>
+                    <div class="appVip scroll pt-1 rounded">
+                        <div class="appVipList scrollBody small">
+
+                            <!-- <div class="d-flex border rounded px-2 mb-1 py-1">
+                                <div class="">123</div>
+                                <div class="ml-2 w-50">asdasdasda</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="appPanItem" class="appItem mb-2">
+                <input class="appItemRadio" type="checkbox" name="appItem" id="appRadioPan">
+                <label for="appRadioPan" class="m-0 d-block">
+                    <div class="appItemHead border  border-success rounded d-flex align-items-center px-2 py-1">
+                        <i class="fa fa-file-zip-o fa-fw" aria-hidden="true"></i>
+                        <span class="ml-2">PAN资源搜索</span>
+                        <i class="fa fa-angle-double-down fa-fw "></i>
+                    </div>
+                </label>
+                <div class="appItemBody mt-1">
+                    <input type="text" class="appPanSureInput form-control form-control-sm mb-1" placeholder="回车搜搜-">
+                    <div class="appRight">
+                        <input type="text" class="appPanFindInput form-control form-control-sm" placeholder="筛选-支持正则">
+                        <span class="appPanFindSum appRightItem"></span>
+                    </div>
+                    <div class="appPan scroll mt-1 pt-1 rounded">
+                        <div class="appPanList scrollBody small">
+
+                            <!-- <div class="d-flex border rounded px-2 mb-1 py-1">
+                                <div class="">123</div>
+                                <div class="ml-2 w-50">asdasdasda</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/popup.js"></script>
+</body>
+
+</html>

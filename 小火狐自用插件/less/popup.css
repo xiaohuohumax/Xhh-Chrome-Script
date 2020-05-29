@@ -1,0 +1,94 @@
+/* ============================= 设置 ============================= */
+/* ============================= /设置 ============================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+.scroll {
+  overflow: hidden;
+}
+.scroll .scrollBody {
+  width: calc(100% + 17px);
+  overflow-y: scroll;
+  max-height: 100%;
+}
+.appRight {
+  position: relative;
+}
+.appRight .appRightItem {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0, -50%);
+}
+/* 通用样式 */
+.app {
+  width: 250px;
+  height: 470px;
+  /* 脚本模块 */
+}
+.app .appItem {
+  font-size: 16px;
+  display: none;
+}
+.app .appItem .appItemRadio {
+  display: none;
+}
+.app .appItem .appItemHead {
+  cursor: pointer;
+  position: relative;
+}
+.app .appItem .appItemHead:hover {
+  color: palevioletred;
+}
+.app .appItem .appItemHead i {
+  color: teal;
+}
+.app .appItem .appItemHead i:last-child {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0, -50%);
+}
+.app .appItem .appItemBody {
+  display: none;
+}
+.app .appItem .appItemBody .appVipList > div,
+.app .appItem .appItemBody .appPanList > div {
+  cursor: pointer;
+}
+.app .appItem .appItemBody .appVipList > div:hover,
+.app .appItem .appItemBody .appPanList > div:hover {
+  background: palevioletred;
+  color: white;
+}
+.app .appItem .appItemBody .appVipList > div:hover::after,
+.app .appItem .appItemBody .appPanList > div:hover::after {
+  color: white;
+}
+.app .appItem .appItemBody .appItemCho {
+  position: relative;
+}
+.app .appItem .appItemBody .appItemCho::after {
+  content: "#";
+  color: tomato;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0, -50%);
+}
+.app .appItem .appItemRadio:checked ~ label .appItemHead {
+  color: tomato;
+}
+.app .appItem .appItemRadio:checked ~ label .appItemHead i:last-child {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.app .appItem .appItemRadio:checked ~ .appItemBody {
+  display: block;
+}
+.app .appVip .scrollBody,
+.app .appPan .scrollBody {
+  height: 300px;
+}

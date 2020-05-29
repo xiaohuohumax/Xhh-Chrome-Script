@@ -1,0 +1,125 @@
+/* ============================= 设置 ============================= */
+@appWidth : 250px;
+@appHeight: 470px;
+
+/* ============================= /设置 ============================= */
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+
+// 滑动条影藏
+.scroll {
+    overflow: hidden;
+
+    .scrollBody {
+        width     : calc(100% + 17px);
+        overflow-y: scroll;
+        max-height: 100%;
+    }
+}
+
+.appRight {
+    position: relative;
+
+    .appRightItem {
+        position : absolute;
+        top      : 50%;
+        right    : 5px;
+        transform: translate(0, -50%);
+    }
+}
+
+/* 通用样式 */
+
+.app {
+    width : @appWidth;
+    height: @appHeight;
+
+
+    /* 脚本模块 */
+    .appItem {
+        font-size: 16px;
+        display  : none;
+
+        .appItemRadio {
+            display: none;
+        }
+
+        .appItemHead {
+            cursor  : pointer;
+            position: relative;
+
+            &:hover {
+                color: palevioletred;
+            }
+
+            i {
+                color: teal;
+
+                &:last-child {
+                    .appRight .appRightItem;
+                }
+            }
+
+        }
+
+        .appItemBody {
+            display: none;
+
+            .appVipList,
+            .appPanList {
+                &>div {
+                    cursor: pointer;
+
+                    &:hover {
+                        background: palevioletred;
+                        color     : white;
+
+                        &::after {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .appItemCho {
+                position: relative;
+
+                &::after {
+                    content  : "#";
+                    color    : tomato;
+                    position : absolute;
+                    top      : 50%;
+                    right    : 5px;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+
+        .appItemRadio:checked~label .appItemHead {
+            color: tomato;
+
+            i:last-child {
+                transform: translate(0, -50%) rotate(180deg);
+            }
+        }
+
+        .appItemRadio:checked~.appItemBody {
+            display: block;
+        }
+
+
+    }
+
+
+
+    .appVip,
+    .appPan {
+        .scrollBody {
+            height: 300px;
+        }
+    }
+}
